@@ -1,0 +1,9 @@
+streamlit
+numpy
+opencv-python-headless
+tensorflow==2.14.0
+tensorflow_hub==0.15.0
+pillow
+ultralytics
+rasterio
+matplotlib
