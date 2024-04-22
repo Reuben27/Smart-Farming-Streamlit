@@ -1,12 +1,12 @@
 import streamlit as st
 import numpy as np
-import cv2 as cv2 
+# import cv2 as cv2 
 from PIL import Image
 from ultralytics import YOLO
 import rasterio
-from rasterio.plot import show
+# from rasterio.plot import show
 import numpy as np
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 try:
   # Load a model
