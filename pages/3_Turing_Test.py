@@ -4,7 +4,8 @@ import streamlit as st
 from PIL import Image
 
 st.title("GANs Turing Test")
-images = [".\\images\\test1.jpg", ".\\images\\test1.jpg", ".\\images\\test1.jpg", ".\\images\\test1.jpg", ".\\images\\test1.jpg", ".\\images\\test1.jpg"]
+path = "https://github.com/Reuben27/Smart-Farming-Streamlit/blob/raw/main/images/"
+images = ["test1.jpg", "test1.jpg", "test1.jpg", "test1.jpg", "test1.jpg", "test1.jpg"]
 done1 = False
 done2 = False
 done3 = False
@@ -21,11 +22,11 @@ if(done1 == False):
     Image.Resampling = Image
   with col_1:
     st.subheader("Image 1")
-    st.image(images[0])
+    st.image(path + images[0])
     agree1_a = st.checkbox('This' , key = 1)
   with col_2:
     st.subheader("Image 2")
-    st.image(images[1])
+    st.image(path + images[1])
     agree1_b = st.checkbox('This', key = 2)
 
 if(agree1_a or agree1_b):
@@ -37,11 +38,11 @@ if(done1 == True and done2 == False):
     Image.Resampling = Image
   with col_1:
     st.subheader("Image 1")
-    st.image(images[0])
+    st.image(path + images[0])
     agree2_a = st.checkbox('This', key = 3)
   with col_2:
     st.subheader("Image 2")
-    st.image(images[1])
+    st.image(path + images[1])
     agree2_b= st.checkbox('This', key = 4)
 
 if(agree2_a or agree2_b):
@@ -53,11 +54,11 @@ if(done1 == True and done2 == True and done3 == False):
     Image.Resampling = Image
   with col_1:
     st.subheader("Image 1")
-    st.image(images[0])
+    st.image(path + images[0])
     agree3_a = st.checkbox('This', key = 5)
   with col_2:
     st.subheader("Image 2")
-    st.image(images[1])
+    st.image(path + images[1])
     agree3_b = st.checkbox('This', key = 6)
 
 if(agree3_a or agree3_b):
