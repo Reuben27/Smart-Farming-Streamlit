@@ -8,9 +8,13 @@ from rasterio.plot import show
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Load a model
-model = YOLO(".\\pages\\best.pt") 
-# Paths to input band files
+try:
+  # Load a model
+  model = YOLO(".\\pages\\best.pt") 
+  # Paths to input band files
+except:
+  model = None
+
 red_band_path = ".\\images\\red_band.TIF"
 green_band_path = ".\\images\\green_band.TIF"
 nir_band_path = ".\\images\\nir_band.TIF"
@@ -74,7 +78,7 @@ Reconstruction = st.button("Do reconstruction")
 if Reconstruction:
   reconstruction()
 
-if Object_Detection:
+if Object_Detection and model is not None:
   if uploaded_files is not None:
     for uploaded_file in uploaded_files:
       print(uploaded_file)
