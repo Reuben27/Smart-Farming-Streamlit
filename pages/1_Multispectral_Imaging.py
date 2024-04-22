@@ -81,7 +81,7 @@ with col_3:
   Reconstruction = st.button("Do reconstruction")
 
 if agree and Reconstruction:
-  reconstruction()
+  st.image(path + "re_jpeg.jpg")
 
 # if Object_Detection and model is not None and not agree:
 #   if uploaded_files is not None:
