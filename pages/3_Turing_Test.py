@@ -5,7 +5,7 @@ from PIL import Image
 
 st.title("GANs Turing Test")
 path = "https://github.com/Reuben27/Smart-Farming-Streamlit/raw/main/images/"
-images = ["test1.jpg", "test1.jpg", "test1.jpg", "test1.jpg", "test1.jpg", "test1.jpg"]
+images = ["F1.png", "R1.jpg", "F2.png", "R2.jpg", "F3.png", "R3.jpg"]
 done1 = False
 done2 = False
 done3 = False
@@ -66,3 +66,4 @@ if(agree3_a or agree3_b):
 
 if(done1 and done2 and done3):
   st.header("All Donee!")
+  st.header(str(int(int(agree1_b) + int(agree2_b) + int(agree3_b))) + "/3")
