@@ -9,11 +9,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Load a model
-model = YOLO("E:\\IITGn Academics\\Semester X\\CS 499\\Codes\\best.pt") 
+model = YOLO(".\\pages\\best.pt") 
 # Paths to input band files
-red_band_path = "E:\\IITGn Academics\\Semester X\\CS 499\\Codes\\deployment\\images\\red_band.TIF"
-green_band_path = "E:\\IITGn Academics\\Semester X\\CS 499\\Codes\\deployment\\images\\green_band.TIF"
-nir_band_path = "E:\\IITGn Academics\\Semester X\\CS 499\\Codes\\deployment\\images\\nir_band.TIF"
+red_band_path = ".\\images\\red_band.TIF"
+green_band_path = ".\\images\\green_band.TIF"
+nir_band_path = ".\\images\\nir_band.TIF"
 
 def object_detection(image):
   results = model([image])  # return a list of Results objects
