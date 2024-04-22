@@ -1,12 +1,17 @@
 import streamlit as st
 import numpy as np
-import cv2 as cv2 
+# import cv2 as cv2 
 from PIL import Image
 import tensorflow as tf
 import tensorflow_hub as hub
 
 esrgn_path = "https://tfhub.dev/captain-pool/esrgan-tf2/1"
 model = hub.load(esrgn_path)
+
+try:
+  import cv2 as cv2
+except:
+  pass
 
 ###### Image Augmentation Options ######
 def rotation(img_array, degree):   
