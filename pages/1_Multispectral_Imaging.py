@@ -2,7 +2,6 @@ import streamlit as st
 import numpy as np
 # import cv2 as cv2 
 from PIL import Image
-from ultralytics import YOLO
 import rasterio
 # from rasterio.plot import show
 import numpy as np
@@ -11,6 +10,7 @@ import numpy as np
 path = "https://github.com/Reuben27/Smart-Farming-Streamlit/raw/main/images/"
 try:
   # Load a model
+  from ultralytics import YOLO
   model = YOLO(".\\pages\\best.pt") 
   # Paths to input band files
 except:
