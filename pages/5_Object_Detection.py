@@ -99,4 +99,4 @@ if Object_Detection and model is not None and not agree:
       st.subheader("Output Image")
       # st.image(modified_img_array, clamp=True, channels='BGR')
 elif Object_Detection:
-  st.image(path + "re_jpeg.jpg")
+  st.image(path + "test1.jpg")
