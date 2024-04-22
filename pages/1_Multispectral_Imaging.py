@@ -75,28 +75,28 @@ uploaded_files = st.file_uploader("Upload an Image", type=["png", "jpg", "jpeg",
 col_1, col_2, col_3 = st.columns(3)
 with col_1:
   agree = st.checkbox("Use Default Images")
-with col_2:
-  Object_Detection = st.button("Do Object Detection")
+# with col_2:
+#   Object_Detection = st.button("Do Object Detection")
 with col_3:
   Reconstruction = st.button("Do reconstruction")
 
 if agree and Reconstruction:
   reconstruction()
 
-if Object_Detection and model is not None and not agree:
-  if uploaded_files is not None:
-    for uploaded_file in uploaded_files:
-      print(uploaded_file)
-      image = Image.open(uploaded_file)
-      # image = uploaded_file.read()
-      original_img_array = np.array(image)
-      # modified_img_array = np.array(image)
+# if Object_Detection and model is not None and not agree:
+#   if uploaded_files is not None:
+#     for uploaded_file in uploaded_files:
+#       print(uploaded_file)
+#       image = Image.open(uploaded_file)
+#       # image = uploaded_file.read()
+#       original_img_array = np.array(image)
+#       # modified_img_array = np.array(image)
 
-      st.subheader("Original Image")
-      # st.image(original_img_array, clamp=True, channels='BGR')
-      modified_img_array = object_detection(image)
+#       st.subheader("Original Image")
+#       # st.image(original_img_array, clamp=True, channels='BGR')
+#       modified_img_array = object_detection(image)
 
-      st.subheader("Output Image")
-      # st.image(modified_img_array, clamp=True, channels='BGR')
-elif Object_Detection:
-  st.image(path + "test1.jpg")
+#       st.subheader("Output Image")
+#       # st.image(modified_img_array, clamp=True, channels='BGR')
+# elif Object_Detection:
+#   st.image(path + "re_jpeg.jpg")
