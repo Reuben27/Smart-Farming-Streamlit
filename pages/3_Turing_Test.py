@@ -4,7 +4,7 @@ import streamlit as st
 from PIL import Image
 
 st.title("GANs Turing Test")
-path = "https://github.com/Reuben27/Smart-Farming-Streamlit/blob/raw/main/images/"
+path = "https://github.com/Reuben27/Smart-Farming-Streamlit/raw/main/images/"
 images = ["test1.jpg", "test1.jpg", "test1.jpg", "test1.jpg", "test1.jpg", "test1.jpg"]
 done1 = False
 done2 = False
